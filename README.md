@@ -30,3 +30,5 @@ npm install && npm run dev
 You will have a FeathersJS project running on `localhost:3030`.
 
 The index page is rendered by Vite React SSR, and you can navigate to `/about` to see the page rendered by React Router's BrowserRouter.
+
+Let's say you load the index page by requesting the html file from the server, and then navigate to `/about`, you will see the page rendered by React Router's BrowserRouter which is rendered all by the client in your browser. This is way of React SSR and Hydration.
