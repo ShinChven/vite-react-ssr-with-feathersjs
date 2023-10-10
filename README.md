@@ -2,7 +2,7 @@
 
 This is a template for Vite React SSR with FeathersJS.
 
-In this template, the Vite React SSR project is deployed to the FeathersJS project's `app`, with the client in `public`, and the server in `src/ssr/server`.
+In this template, the Vite React SSR project is deployed to the FeathersJS project's `app`, with the client in `public`, and the server in `src/ssr/server.js`.
 
 ## Key Components in This Template
 
