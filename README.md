@@ -78,9 +78,7 @@ Now, the Vite React SSR project is fully set up.
    2. My options: Express, No schema, and Another database.
 2. Install `react` and `react router` to the project:
     ```bash
-    npm install react react
-
--dom react-router-dom
+    npm install react react-dom react-router-dom
     npm install -D @types/react @types/react-dom
     ```
 3. To enable `ESM` support in a TypeScript FeathersJS project, please DO NOT add `"type": "module"` in your package.json. Instead, tweak the `compilerOptions` in your `tsconfig.json` by setting `"module": "NodeNext"` and `"moduleResolution": "NodeNext"`:
