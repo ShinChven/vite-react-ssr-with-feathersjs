@@ -84,23 +84,17 @@ Now the Vite React SSR project is all set.
     npm install react react-dom react-router-dom
     npm install -D @types/react @types/react-dom
     ```
-3. Vite exports only `ESM` builds, we need to enable `type:module` in `package.json` to use `ESM`:
-    ```json
-    {
-       "type": "module",
-    }
-    ```
-4. Allow JavaScript code and set TypeScript `compilerOptions` to target `NodeNext` in `tsconfig.json`:
+3. To enble `ESM` support in a TypeScript FeathersJS project, please `DO NOT` add `"type": "module"` in your package.json. Instead, you should tweak the `compilerOptions` in your `tsconfig.json` by setting `"module": "NodeNext"` and `"moduleResolution": "NodeNext"`:
     ```json
     {
       "compilerOptions": {
         "module": "NodeNext",
         "moduleResolution": "NodeNext",
-        "allowJs": true
+        "allowJs": true // enable JavaScript files to be compiled
       }
     }
     ```
-5. Mount a middleware to handle ssr before serving public statics in [app.ts](/app/src/app.ts):
+4. Mount a middleware to handle ssr before serving public statics in [app.ts](/app/src/app.ts):
     ```ts
     import * as ssr from './ssr/server.js'
     const template = fs.readFileSync(path.resolve('public/index.html'), 'utf-8');
@@ -120,4 +114,8 @@ Now the Vite React SSR project is all set.
       }
     })
     ```
+
+## Simple Express App Example
+
+In the server folder, there is a even simple Express app example of SSR with Vite React SSR.
 
